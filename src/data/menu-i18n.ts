@@ -1,0 +1,397 @@
+// ═══════════════════════════════════════════════════════════════════════════
+//  此檔案由 menu-raw.ts 展開,供前端渲染使用
+//  翻譯為觀光客可理解的英、日、韓對照
+// ═══════════════════════════════════════════════════════════════════════════
+
+import type { MenuItem } from '../types/menu'
+
+const PASTA_NOTE = {
+  zh: '可選直麵或筆管;每份主餐皆隨餐附小杯飲料',
+  en: 'Spaghetti or penne; each main comes with a small drink',
+  ja: 'スパゲッティ又はペンネ;メインに小さなドリンク付き',
+  ko: '스파게티 또는 펜네;메인 메뉴에 작은 음료 포함',
+}
+
+const SPAGHETTI_NOTE = {
+  zh: '直麵',
+  en: 'Spaghetti',
+  ja: 'スパゲッティ',
+  ko: '스파게티',
+}
+
+const LIMITED_DAILY = {
+  zh: '每日限量',
+  en: 'Limited daily quantity',
+  ja: '毎日数量限定',
+  ko: '매일 한정 수량',
+}
+
+const EMPTY = { zh: '', en: '', ja: '', ko: '' }
+
+export const menuItems: MenuItem[] = [
+  // ─── chef ───
+  {
+    id: 'chef-001',
+    category: 'chef',
+    names: {
+      zh: '匈牙利牛肉飯',
+      en: 'Hungarian Beef Risotto',
+      ja: 'ハンガリアンビーフリゾット',
+      ko: '헝가리안 비프 리조또',
+    },
+    price: [{ label: null, value: 250 }],
+    image: null,
+    emoji: '🍛',
+    tags: ['R', 'B'],
+    desc: EMPTY,
+    note: LIMITED_DAILY,
+  },
+
+  // ─── light_pasta ───
+  {
+    id: 'light_pasta-001',
+    category: 'light_pasta',
+    names: {
+      zh: '清爽蔬食義大利麵',
+      en: 'Vegetable Spaghetti',
+      ja: 'ベジタブルスパゲッティ',
+      ko: '베지터블 스파게티',
+    },
+    price: [{ label: null, value: 190 }],
+    image: null,
+    emoji: '🌿',
+    tags: [],
+    desc: EMPTY,
+    note: SPAGHETTI_NOTE,
+  },
+  {
+    id: 'light_pasta-002',
+    category: 'light_pasta',
+    names: {
+      zh: '蒜香蛤蜊義大利麵',
+      en: 'Garlic Clams Spaghetti',
+      ja: 'ガーリックボンゴレスパゲッティ',
+      ko: '갈릭 봉골레 스파게티',
+    },
+    price: [{ label: null, value: 230 }],
+    image: null,
+    emoji: '🐚',
+    tags: [],
+    desc: EMPTY,
+    note: SPAGHETTI_NOTE,
+  },
+  {
+    id: 'light_pasta-003',
+    category: 'light_pasta',
+    names: {
+      zh: '蒜香鮮蝦義大利麵',
+      en: 'Garlic Shrimp Spaghetti',
+      ja: 'ガーリックシュリンプスパゲッティ',
+      ko: '갈릭 슈림프 스파게티',
+    },
+    price: [{ label: null, value: 240 }],
+    image: null,
+    emoji: '🍤',
+    tags: [],
+    desc: EMPTY,
+    note: SPAGHETTI_NOTE,
+  },
+
+  // ─── rich_pasta ───
+  {
+    id: 'rich_pasta-001',
+    category: 'rich_pasta',
+    names: {
+      zh: '波隆那肉醬義大利麵',
+      en: 'Spaghetti Bolognese',
+      ja: 'ボロネーゼ',
+      ko: '볼로네제 스파게티',
+    },
+    price: [{ label: null, value: 190 }],
+    image: null,
+    emoji: '🍝',
+    tags: ['B', 'P'],
+    desc: EMPTY,
+    note: PASTA_NOTE,
+  },
+  {
+    id: 'rich_pasta-002',
+    category: 'rich_pasta',
+    names: {
+      zh: '白醬培根義大利麵',
+      en: 'White Sauce Bacon Pasta',
+      ja: 'ホワイトソース ベーコンパスタ',
+      ko: '화이트 소스 베이컨 파스타',
+    },
+    price: [{ label: null, value: 190 }],
+    image: null,
+    emoji: '🥓',
+    tags: ['P'],
+    desc: EMPTY,
+    note: PASTA_NOTE,
+  },
+  {
+    id: 'rich_pasta-003',
+    category: 'rich_pasta',
+    names: {
+      zh: '白醬野菇義大利麵',
+      en: 'White Sauce Mushroom Pasta',
+      ja: 'ホワイトソース きのこパスタ',
+      ko: '화이트 소스 버섯 파스타',
+    },
+    price: [{ label: null, value: 190 }],
+    image: null,
+    emoji: '🍄',
+    tags: [],
+    desc: EMPTY,
+    note: PASTA_NOTE,
+  },
+  {
+    id: 'rich_pasta-004',
+    category: 'rich_pasta',
+    names: {
+      zh: '白醬雞肉義大利麵',
+      en: 'White Sauce Chicken Pasta',
+      ja: 'ホワイトソース チキンパスタ',
+      ko: '화이트 소스 치킨 파스타',
+    },
+    price: [{ label: null, value: 230 }],
+    image: null,
+    emoji: '🍗',
+    tags: [],
+    desc: EMPTY,
+    note: PASTA_NOTE,
+  },
+  {
+    id: 'rich_pasta-005',
+    category: 'rich_pasta',
+    names: {
+      zh: '白醬蛤蜊義大利麵',
+      en: 'White Sauce Clams Pasta',
+      ja: 'ホワイトソース ボンゴレパスタ',
+      ko: '화이트 소스 봉골레 파스타',
+    },
+    price: [{ label: null, value: 230 }],
+    image: null,
+    emoji: '🐚',
+    tags: [],
+    desc: EMPTY,
+    note: PASTA_NOTE,
+    soldOut: true,
+  },
+  {
+    id: 'rich_pasta-006',
+    category: 'rich_pasta',
+    names: {
+      zh: '青醬雞肉義大利麵',
+      en: 'Chicken Pesto Pasta',
+      ja: 'チキンジェノベーゼ',
+      ko: '치킨 페스토 파스타',
+    },
+    price: [{ label: null, value: 230 }],
+    image: null,
+    emoji: '🌿',
+    tags: [],
+    desc: EMPTY,
+    note: PASTA_NOTE,
+  },
+  {
+    id: 'rich_pasta-007',
+    category: 'rich_pasta',
+    names: {
+      zh: '青醬海鮮義大利麵',
+      en: 'Seafood Pesto Pasta',
+      ja: 'シーフードジェノベーゼ',
+      ko: '씨푸드 페스토 파스타',
+    },
+    price: [{ label: null, value: 250 }],
+    image: null,
+    emoji: '🦐',
+    tags: [],
+    desc: EMPTY,
+    note: PASTA_NOTE,
+  },
+
+  // ─── veggie ───
+  {
+    id: 'veggie-001',
+    category: 'veggie',
+    names: {
+      zh: '烤沙拉',
+      en: 'Roast Salad',
+      ja: 'ローストサラダ',
+      ko: '로스트 샐러드',
+    },
+    price: [{ label: null, value: 70 }],
+    image: null,
+    emoji: '🥗',
+    tags: [],
+    desc: EMPTY,
+    note: {
+      zh: '現烤約 10–15 分鐘製作',
+      en: 'Freshly roasted, takes about 10–15 minutes',
+      ja: '焼き上げに約10〜15分かかります',
+      ko: '즉석 구이로 약 10–15분 소요',
+    },
+  },
+
+  // ─── soup ───
+  {
+    id: 'soup-001',
+    category: 'soup',
+    names: {
+      zh: '每日湯品',
+      en: 'Soup of the Day',
+      ja: '本日のスープ',
+      ko: '오늘의 수프',
+    },
+    price: [{ label: null, value: 60 }],
+    image: null,
+    emoji: '🍲',
+    tags: [],
+    desc: EMPTY,
+    note: {
+      zh: '採用當季新鮮食材',
+      en: 'Made with fresh seasonal ingredients',
+      ja: '旬の新鮮食材を使用',
+      ko: '제철 신선 재료 사용',
+    },
+  },
+
+  // ─── single ───
+  {
+    id: 'single-001',
+    category: 'single',
+    names: {
+      zh: '酥炸雞塊',
+      en: 'Fried Chicken Nuggets',
+      ja: 'チキンナゲット',
+      ko: '치킨 너겟',
+    },
+    price: [{ label: null, value: 80 }],
+    image: null,
+    emoji: '🍗',
+    tags: [],
+    desc: EMPTY,
+    note: EMPTY,
+  },
+  {
+    id: 'single-002',
+    category: 'single',
+    names: {
+      zh: '酥炸薯條',
+      en: 'French Fries',
+      ja: 'フライドポテト',
+      ko: '감자튀김',
+    },
+    price: [{ label: null, value: 60 }],
+    image: null,
+    emoji: '🍟',
+    tags: [],
+    desc: EMPTY,
+    note: EMPTY,
+  },
+  {
+    id: 'single-003',
+    category: 'single',
+    names: {
+      zh: '酥炸洋蔥圈',
+      en: 'Onion Rings',
+      ja: 'オニオンリング',
+      ko: '어니언 링',
+    },
+    price: [{ label: null, value: 60 }],
+    image: null,
+    emoji: '🧅',
+    tags: [],
+    desc: EMPTY,
+    note: EMPTY,
+  },
+  {
+    id: 'single-004',
+    category: 'single',
+    names: {
+      zh: '冰心伯爵茶',
+      en: 'Cold Earl Grey Tea',
+      ja: 'アイスアールグレイ',
+      ko: '콜드 얼그레이 티',
+    },
+    price: [{ label: null, value: 40 }],
+    image: null,
+    emoji: '🧊',
+    tags: [],
+    desc: EMPTY,
+    note: {
+      zh: '無冰塊',
+      en: 'No ice',
+      ja: '氷なし',
+      ko: '얼음 없음',
+    },
+  },
+  {
+    id: 'single-005',
+    category: 'single',
+    names: {
+      zh: '溫暖伯爵茶',
+      en: 'Warm Earl Grey Tea',
+      ja: 'ホットアールグレイ',
+      ko: '핫 얼그레이 티',
+    },
+    price: [{ label: null, value: 50 }],
+    image: null,
+    emoji: '🍵',
+    tags: [],
+    desc: EMPTY,
+    note: EMPTY,
+  },
+  {
+    id: 'single-006',
+    category: 'single',
+    names: {
+      zh: '溫暖蘋果茶',
+      en: 'Warm Apple Tea',
+      ja: 'ホットアップルティー',
+      ko: '핫 애플 티',
+    },
+    price: [{ label: null, value: 60 }],
+    image: null,
+    emoji: '🍎',
+    tags: [],
+    desc: EMPTY,
+    note: EMPTY,
+  },
+
+  // ─── dessert ───
+  {
+    id: 'dessert-001',
+    category: 'dessert',
+    names: {
+      zh: '義式奶酪',
+      en: 'Panna Cotta',
+      ja: 'パンナコッタ',
+      ko: '판나코타',
+    },
+    price: [{ label: null, value: 65 }],
+    image: null,
+    emoji: '🍮',
+    tags: [],
+    desc: EMPTY,
+    note: LIMITED_DAILY,
+  },
+  {
+    id: 'dessert-002',
+    category: 'dessert',
+    names: {
+      zh: '巴斯克蛋糕',
+      en: 'Basque Cheesecake',
+      ja: 'バスクチーズケーキ',
+      ko: '바스크 치즈케이크',
+    },
+    price: [{ label: null, value: 100 }],
+    image: null,
+    emoji: '🍰',
+    tags: [],
+    desc: EMPTY,
+    note: LIMITED_DAILY,
+  },
+]

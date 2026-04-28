@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+    background: #efefef;
+    color: #2a2a2a;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  body[data-lang='ja'] {
+    font-family: 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+  }
+
+  body[data-lang='ko'] {
+    font-family: 'Noto Sans KR', 'Noto Sans TC', sans-serif;
+  }
+
+  body[data-lang='en'] {
+    font-family: 'Noto Sans TC', system-ui, sans-serif;
+  }
+}
